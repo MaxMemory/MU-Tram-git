@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="Tramstyle.css" />
   <link rel="stylesheet" type="text/css" href="putTramStyle.css" />
 
-
+<!-- test Art so bad guy. asdfasdf-->
 
 </head>
 <body>
@@ -47,7 +47,7 @@
                 <input type="checkbox" id="TramAll" checked onclick="acBottomAll()" value="true">
                 <div class="slider round"></div>
               </label>
-              <h1 class="Big">All</h1>
+              <h1 class="Big">All asdfsadf asdfs</h1>
               <label class="switch" style="margin: auto">
                 <input type="checkbox" id="TramGreen" checked onclick="acBottomGreen()" value="true">
                 <div class="slider round"></div>
