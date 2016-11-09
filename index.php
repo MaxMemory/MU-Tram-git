@@ -1,3 +1,21 @@
+<?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "tram";
+
+
+  $connect = new mysqli($servername, $username, $password, $dbname);
+  if($connect->connect_error){
+    die("Connection error: ".$connect->connect_error);
+  }
+?>
+
+
+
+
+
+
 <html>
 <head>
   <title>MU-Tram Project</title>
@@ -29,6 +47,7 @@
         </div>
       </li>
       <li style="float: right"><a href="#" >Search</a></li>
+      <li style="float: right"><a href="#" >Login</a></li>
     </ul>
   </div>
   <div id="back">
