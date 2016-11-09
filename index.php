@@ -33,7 +33,7 @@
   </div>
   <div id="back">
     <div id="backpage">
-      <div id="MapBox">Art Kuy
+      <div id="MapBox">
         <h1 class="center" id="banner">Welcome to <span>MU</span>-Tram</h1>
         <table style="width: 100%">
           <tr>
