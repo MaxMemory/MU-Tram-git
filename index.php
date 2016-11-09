@@ -11,11 +11,6 @@
   }
 ?>
 
-
-
-
-
-
 <html>
 <head>
   <title>MU-Tram Project</title>
@@ -100,10 +95,20 @@
       <div id="stationBox">
         <p style="color: white">Station</p>
         <?php
-          $nStation = 40;
-          for($i=1 ; $i<=$nStation; $i++){
-            echo "<div class=\"stationinLine\"><a href=\"#\" style=\"width: 100%\">".$i."</a></div>";
+          $sql = "SELECT stationID, stationName, positionX, positionY FROM stations";
+          $dbStation = $connect->query($sql);
+          if($dbStation->num_rows > 0){
+            while($row = $dbStation->fetch_assoc()){
+              echo "<div class=\"stationinLine\"><a href=\"#\" style=\"width: 100%\">".$row["stationID"]."). ".$row["stationName"]."</a></div>";
+            }
           }
+          else{
+            echo "0 results";
+          }
+
+          // for($i=1 ; $i<=$nStation; $i++){
+          //   echo "<div class=\"stationinLine\"><a href=\"#\" style=\"width: 100%\">".$i."</a></div>";
+          // }
         ?>
       </div>
     </div>
