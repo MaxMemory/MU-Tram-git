@@ -6,15 +6,7 @@
     <link rel="stylesheet" type="text/css" href="profileAboutUs.css">
   </head>
   <body>
-    <div id="menu">
-      <ul class="menubar">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="location.php">Location</a></li>
-        <li><a href="aboutUs.php">About us</a></li>
-        <li style="float: right"><a href="#" >Language</a></li>
-        <li style="float: right"><a href="#" >Search<div id="search">
-        </div></a></li>
-      </ul>
+    <?php include 'menubar.php';?>
     <div id="page">
       <table>
         <tr>
