@@ -16,34 +16,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Quattrocento+Sans|Roboto|Signika" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="toggleStyle.css" />
-  <link rel="stylesheet" type="text/css" href="search.css" />
-  <link rel="stylesheet" type="text/css" href="Tramstyle.css" />
-  <link rel="stylesheet" type="text/css" href="putTramStyle.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/toggleStyle.css" />
+  <link rel="stylesheet" type="text/css" href="css/search.css" />
+  <link rel="stylesheet" type="text/css" href="css/Tramstyle.css" />
+  <link rel="stylesheet" type="text/css" href="css/putTramStyle.css" />
 
 <!-- Art so good already -->
 
 </head>
 <body>
-  <div id="menu">
-    <ul class="menubar">
-      <li><a href="#" >Home</a></li>
-      <li><a href="#" >Location</a></li>
-      <li><a href="#" >About us</a></li>
-      <li style="float: right">
-        <div class="dropdown">
-          <a class="dropdown-toggle" id="menu1" data-toggle="dropdown" href="#">Language<span class="caret"></span>&nbsp;</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Thai</a></li>
-          </ul>
-        </div>
-      </li>
-      <li style="float: right"><a href="#" >Search</a></li>
-      <li style="float: right"><a href="#" >Login</a></li>
-    </ul>
-  </div>
+  <!-- MenuFile -->
+  <?php include 'menubar.php';?>
+
   <div id="back">
     <div id="backpage">
       <div id="MapBox">
@@ -92,7 +77,7 @@
         </table>
       </div>
       <div id="stationBox">
-        <p style="color: white">Station</p>
+        <p style="color: black; font-size: 25px">Stations</p>
         <?php
           $sql = "SELECT stationID, stationName, positionX, positionY FROM stations";
           $dbStation = $connect->query($sql);
@@ -104,24 +89,21 @@
           else{
             echo "0 results";
           }
-
-          // for($i=1 ; $i<=$nStation; $i++){
-          //   echo "<div class=\"stationinLine\"><a href=\"#\" style=\"width: 100%\">".$i."</a></div>";
-          // }
         ?>
       </div>
     </div>
   </div>
-  <div id="credit">
-      <div class="textcredit">Made by Pond, Ice, Art, Max | Faculty of ICT, Mahidol University.</p>
-  </div>
+
+  <?php include 'credit.php';?>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src="TramjQuery.js"></script>
-  <script src="javascript.js"></script>
-  <script src="jquery.js"></script>
-  <script src="toggleScript.js"></script>
-  <script src="TramScript.js"></script>
+  <script src="javascript/TramjQuery.js"></script>
+  <script src="javascript/javascript.js"></script>
+  <script src="javascript/jquery.js"></script>
+  <script src="javascript/toggleScript.js"></script>
+  <script src="javascript/TramScript.js"></script>
 </body>
 </html>
