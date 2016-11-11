@@ -13,7 +13,6 @@
           </ul>
         </div>
       </li>
-      <li style="float: right"><a href="#" >Search</a></li>
       <li style="float: right"><a href="#" onclick="document.getElementById('startModal').style.display='block'">Login</a></li>
     </ul>
   </div>
@@ -34,7 +33,7 @@
 
       <div class="containerDown" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('startModal').style.display='none'" class="cancelbutton">Cancel</button>
-        <span class="psw"><u><a href="#">sign up!</a></u></span>
+        <span class="psw"><u><a href="register.php">sign up!</a></u></span>
       </div>
     </form>
   </div>
