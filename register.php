@@ -22,6 +22,7 @@
   <link rel="stylesheet" type="text/css" href="css/Tramstyle.css" />
   <link rel="stylesheet" type="text/css" href="css/putTramStyle.css" />
   <link rel="stylesheet" type="text/css" href="css/LogInForm.css" />
+  <link rel="stylesheet" type="text/css" href="css/registerStyle.css" />
 
 <!-- Art so good already -->
 
@@ -34,11 +35,11 @@
     <div id="backpage">
       <div id="registerBox">
         <h1 class="center">Register</h1>
-        <form action="index.php" method="post" >
-          <table>
+        <form action="checkID.php" method="post" >
+          <table  style="width: 20%; background-color: #aef ">
             <tr>
               <td><b>First name</b></td>
-              <td><input type="text" placeholder="Enter first name" name="lastname" required></td>
+              <td><input type="text" placeholder="Enter first name" name="firstname" required></td>
             </tr>
             <tr>
               <td><b>Last name</b></td>
@@ -50,7 +51,7 @@
             </tr>
             <tr>
               <td><b>Password</b></td>
-              <td><input type="text" placeholder="Enter password" name="password" required></td>
+              <td><input type="password" placeholder="Enter password" name="password" required></td>
             </tr>
             <tr>
               <td><b>Date of birth</b></td>
@@ -58,12 +59,13 @@
             </tr>
             <tr>
               <td><b>Gender</b></td>
-              <td><input type="radio" name="gender" value="male" checked>Male&nbsp
+              <td><input type="radio" name="gender" value="male" checked>Male nbsp
                   <input type="radio" name="gender" value="female">Female <br>
               </td>
             </tr>
             <tr>
-              <td><button type="submit">Register</button></td>
+              <td><button type="submit" class="submit-register">Register</button></td>
+              <td>Ss</td>
             </tr>
           </table>
         </form>
