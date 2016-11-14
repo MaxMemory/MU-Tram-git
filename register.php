@@ -59,7 +59,6 @@
             </tr>
             <tr>
               <td><b>Gender</b></td>
-              <td><input type="radio" name="gender" value="male" checked>Male nbsp
                   <input type="radio" name="gender" value="female">Female <br>
               </td>
             </tr>
