@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -14,13 +16,19 @@
     $U_password = $_POST['password'];
     $U_birthDay = $_POST['birthday'];
     $U_gender = $_POST['gender'];
+    if(isset($_POST['upload'])){
+      
+    }
 
-    $sql = "INSERT INTO `user` (`userName`,`password`,`firstName`,`lastName`,`Date`,`Gender`) VALUES ('".$U_firstName."','".$U_lastName."','".$U_userName."','".$U_password."','".$U_birthDay."','".$U_gender."');";
+    $sql = "INSERT INTO `user` (`userName`,`password`,`firstName`,`lastName`,`Date`,`Gender`) VALUES ('".$U_userName."','".$U_password."','".$U_firstName."','".$U_lastName."','".$U_birthDay."','".$U_gender."');";
     if ($connect->query($sql) === TRUE) {
       echo "New record created successfully";
+      header("refresh: 2; url= index.php");
     }
     else {
-      echo "Error: " . $sql . "<br>" . $connect->error;
+      echo "Error: this username is used.";
+      // echo "Error: " . $sql . "<br>" . $connect->error;
+      header("refresh: 2; url= index.php");
   }
 
 

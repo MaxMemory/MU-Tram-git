@@ -32,20 +32,49 @@
   <?php include 'menubar.php';?>
 
   <div id="box-background">
-    <img class="image-border" src="image\Pond_Profile.jpg">
-      <div class="content-box" style="margin-top:18px">Pond</div>
+    <table style="width: 800px; margin:auto">
+      <h1 class="center">Our member</h1>
+      <tr>
+        <td>
+          <div class="box-image">
+            <img class="image-border" src="image\Pond_Profile.jpg" style="margin:center">
+          </div>
+        </td>
+        <td>
+          <div class="box-image">
+            <img class="image-border" src="image\Ice_Profile.jpg" style="margin: auto">
+          </div>
+        </td>
+        <td>
+          <div class="box-image">
+            <img class="image-border" src="image\Max_Profile.jpg" style="margin: auto">
+          </div>
+        </td>
+        <td>
+          <div class="box-image">
+            <img class="image-border" src="image\Art_Profile.jpg" style="margin: auto">
+          </div>
+        </td>
+      </tr>
+      <tr style="width: 100%">
+        <td>
+          <p class="text-name">Pond (MUICT#13)</p>
+        </td>
+        <td>
+          <p class="text-name">Ice (MUICT#13)</p>
+        </td>
+        <td>
+          <p class="text-name">Max (MUICT#13)</p>
+        </td>
+        <td>
+          <p class="text-name">Art (MUICT#13)</p>
+        </td>
+      </tr>
 
-    <img class="image-border" src="image\Ice_Profile.jpg">
-      <div class="content-box" style="margin-top:47px">Ice</div>
+    </table>
 
-    <img class="image-border" src="image\Max_Profile.jpg">
-      <div class="content-box" style="margin-top:49px">Max</div>
-
-    <img class="image-border" src="image\Art_Profile.jpg">
-      <div class="content-box" style="margin-top:50px">Art</div>
   </div>
 
-  <?php include 'credit.php';?>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

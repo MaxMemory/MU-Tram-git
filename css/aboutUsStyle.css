@@ -1,6 +1,6 @@
 #box-background{
   width: 1000px;
-  height: 600px;
+  height: auto;
   margin: auto;
   margin-top: 62px;
   padding: 20px;
@@ -10,10 +10,15 @@
   margin-bottom: 20px;
   box-shadow: 0px 2px 5px #AAA;
 }
-.box-profile{
-
+.text-name{
+  text-align: center;
 }
 
+.box-image{
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
 .image-border{
   border-radius: 90px;
   width: 180px;

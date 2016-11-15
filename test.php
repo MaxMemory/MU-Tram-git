@@ -80,7 +80,7 @@
       <div id="stationBox">
         <p style="color: black; font-size: 25px">Stations</p>
         <?php
-          $sql = "SELECT stationID, stationName FROM stations";
+          $sql = "SELECT stationID, stationName, positionX, positionY FROM stations";
           $dbStation = $connect->query($sql);
           if($dbStation->num_rows > 0){
             while($row = $dbStation->fetch_assoc()){

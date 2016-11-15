@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <body>
   <div id="menu">
     <ul class="menubar">
@@ -13,14 +18,22 @@
           </ul>
         </div>
       </li>
-      <li style="float: right"><a href="#" onclick="document.getElementById('startModal').style.display='block'">Login</a></li>
+      <?php
+      if(isset($_SESSION['login-user'])){
+        echo "<li style=\"float: right\"><a href=\"logout.php\">log out</a></li>";
+        echo "<p style=\"color:#bfff00; float: right\" >".$_SESSION['login-username']."</p>";
+      }
+      else{
+        echo "<li style=\"float: right\"><a href=\"#\" onclick=\"document.getElementById('startModal').style.display='block'\">Login</a></li>";
+      }
+      ?>
+
     </ul>
   </div>
 
-
   <div id="startModal" class="modal">
     <!-- Modal Content -->
-    <form action="index.php" method="post" class="modal-content animate">
+    <form action="check-login.php" method="post" class="modal-content animate">
 
       <div class="container">
         <label><b>Username</b></label>
@@ -28,7 +41,7 @@
 
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-        <button type="submit">Login</button>
+        <button type="submit" name="submit-login">Login</button>
       </div>
 
       <div class="containerDown" style="background-color:#f1f1f1">
