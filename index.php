@@ -30,7 +30,7 @@
   <!-- MenuFile -->
   <?php include 'menubar.php';?>
 
-  <div id="back">
+
     <div id="backpage">
       <div id="MapBox">
         <h1 class="center" id="banner">Welcome to <span>MU</span>-Tram</h1>
@@ -93,7 +93,6 @@
         ?>
       </div>
     </div>
-  </div>
 
   <?php include 'credit.php';?>
 
