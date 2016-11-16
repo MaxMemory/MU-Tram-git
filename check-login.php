@@ -10,7 +10,7 @@
       die("Connection error: ".$connect->connect_error);
     }
 
-    $sql = "SELECT userName, password FROM user";
+    $sql = "SELECT userName, password, profile FROM user";
     $data = $connect->query($sql);
     $check = "false";
     if($data->num_rows > 0){
@@ -18,6 +18,7 @@
         if($row["userName"] == $_POST["uname"] && $row["password"] == $_POST["psw"]){
           $check = "True";
           $_SESSION['login-username'] = $row["userName"];
+          $_SESSION['login-image'] = $row["profile"];
         }
       }
     }

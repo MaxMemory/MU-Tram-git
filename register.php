@@ -30,7 +30,7 @@
     <div id="backpage">
       <div id="registerBox">
         <h1 class="center">Register</h1>
-        <form action="check-register.php" method="post" >
+        <form action="check-register.php" method="post" enctype="multipart/form-data">
           <table style="width: 100% overflow: hidden">
             <tr>
               <td><b>First name</b></td>
