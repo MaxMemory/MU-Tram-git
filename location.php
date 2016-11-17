@@ -1,4 +1,5 @@
 <?php
+
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -22,6 +23,7 @@
   <link rel="stylesheet" type="text/css" href="css/Tramstyle.css" />
   <link rel="stylesheet" type="text/css" href="css/putTramStyle.css" />
   <link rel="stylesheet" type="text/css" href="css/LogInForm.css" />
+  <link rel="stylesheet" type="text/css" href="css/locationStyle.css" />
 
 <!-- Art so good already -->
 
@@ -32,49 +34,19 @@
 
     <div id="backpage">
       <div id="MapBox">
-        <h1 class="center" id="banner">Welcome to <span>MU</span>-Tram</h1>
+        <h1 class="center" id="banner">Location</h1>
         <table style="width: 100%">
           <tr>
             <td class="center">
-              <canvas id="map">asdfasdfads</canvas>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding-top: 10px;" class="center">
-              <label class="switch" style="margin: auto">
-                <input type="checkbox" id="TramAll" checked onclick="acBottomAll()" value="true">
-                <div class="slider round"></div>
-              </label>
-              <h1 class="Big">All</h1>
-              <label class="switch" style="margin: auto">
-                <input type="checkbox" id="TramGreen" checked onclick="acBottomGreen()" value="true">
-                <div class="slider round"></div>
-              </label>
-              <h1 class="Big">Green</h1>
-              <label class="switch" style="margin: auto">
-                <input type="checkbox" id="TramBlue" checked onclick="acBottomBlue()" value="true">
-                <div class="slider round"></div>
-              </label>
-              <h1 class="Big">Blue</h1>
-              <label class="switch" style="margin: auto">
-                <input type="checkbox" id="TramRed" checked onclick="acBottomRed()" value="true">
-                <div class="slider round"></div>
-              </label>
-              <h1 class="Big">Red</h1>
-              <label class="switch" style="margin: auto">
-                <input type="checkbox" id="TramYellow" checked onclick="acBottomYellow()" value="true">
-                <div class="slider round"></div>
-              </label>
-              <h1 class="Big">Yellow</h1>
-              <br />
-              <canvas class="object_Green"></canvas>
-              <canvas class="object_Blue"></canvas>
-              <canvas class="object_Red"></canvas>
-              <canvas class="object_Yellow"></canvas>
-
+              <div id="image-box">
+                <?php
+                echo '<img id="location-image" src="data:image/jpeg;base64,'.base64_encode($_SESSION['login-image']).'">';
+                ?>
+              </div>
             </td>
           </tr>
         </table>
+
       </div>
       <div id="stationBox">
         <p style="color: black; font-size: 25px">Stations</p>
@@ -83,7 +55,7 @@
           $dbStation = $connect->query($sql);
           if($dbStation->num_rows > 0){
             while($row = $dbStation->fetch_assoc()){
-              echo "<div class=\"stationinLine\"><a href=\"#\" style=\"width: 100%\">".$row["stationID"]."). ".$row["stationName"]."</a></div>";
+              echo '<div class="stationinLine" id="station-image'.$row["stationID"].'"><a href="#" style="width: 100%">'.$row["stationID"].').'.$row["stationName"].'</a></div>';
             }
           }
           else{
@@ -104,5 +76,6 @@
   <script src="javascript/jquery.js"></script>
   <script src="javascript/toggleScript.js"></script>
   <script src="javascript/TramScript.js"></script>
+  <script src="javascript/location.js"></script>
 </body>
 </html>

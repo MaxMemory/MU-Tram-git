@@ -7,7 +7,7 @@
   <div id="menu">
     <ul class="menubar">
       <li><a href="index.php" >Home</a></li>
-      <li><a href="#" >Location</a></li>
+      <li><a href="location.php" >Location</a></li>
       <li><a href="aboutUS.php" >About us</a></li>
       <li style="float: right">
         <div class="dropdown">
