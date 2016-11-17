@@ -23,7 +23,7 @@
       }
     }
     if($check == "True"){
-      echo "Login seccess ";
+      echo "Login success ";
       $_SESSION['login-user'] = True;
       header("Location: index.php");
     }

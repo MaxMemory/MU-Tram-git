@@ -21,7 +21,7 @@
       <?php
       if(isset($_SESSION['login-user'])){
         echo "<li style=\"float: right\"><a href=\"logout.php\">log out</a></li>";
-        echo "<p style=\"color:#bfff00; float: right\" >".$_SESSION['login-username']."</p>";
+        echo "<a href=\"showAccount.php\"><p style=\"color:#bfff00; float: right\" >".$_SESSION['login-username']."</p></a>";
         echo '<img class="profile-menu" style="float: right" src="data:image/jpeg;base64,'.base64_encode($_SESSION['login-image']).'">';
       }
       else{
