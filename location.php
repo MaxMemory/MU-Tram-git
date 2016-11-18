@@ -40,7 +40,7 @@
             <td class="center">
               <div id="image-box">
                 <?php
-                echo '<img id="location-image" src="data:image/jpeg;base64,'.base64_encode($_SESSION['login-image']).'">';
+                echo '<img id="location-image" src="image/DSCF4176-73.jpg">';
                 ?>
               </div>
             </td>

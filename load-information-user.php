@@ -30,7 +30,7 @@
 
 </head>
 <body>
-  <h1 class="center" id="head-text"><?php echo $station; ?></h1>
+  <h1><?php echo $station; ?></h1>
   <table style="width: 100%">
     <tr>
       <td class="center">
