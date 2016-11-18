@@ -83,7 +83,7 @@
           $dbStation = $connect->query($sql);
           if($dbStation->num_rows > 0){
             while($row = $dbStation->fetch_assoc()){
-              echo "<div class=\"stationinLine\"><a href=\"#\" style=\"width: 100%\">".$row["stationID"]."). ".$row["stationName"]."</a></div>";
+              echo '<div class="stationinLine" id="station-image'.$row["stationID"].'"><a href="#" style="width: 100%">'.$row["stationID"].').'.$row["stationName"].'</a></div>';
             }
           }
           else{
@@ -104,5 +104,6 @@
   <script src="javascript/jquery.js"></script>
   <script src="javascript/toggleScript.js"></script>
   <script src="javascript/TramScript.js"></script>
+  <script src="javascript/location.js"></script>
 </body>
 </html>
