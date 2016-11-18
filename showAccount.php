@@ -25,7 +25,7 @@
 <body>
 <?php include 'menubar.php';?>
 
-  <div id="backpage-showAccount">
+  <div id="backpage-showAccount" style="height:520px">
     <form action="check-updateProfile.php" method="post" enctype="multipart/form-data">
     <?php
     $post_name = $_SESSION['login-username'];
