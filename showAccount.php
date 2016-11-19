@@ -42,7 +42,8 @@
     }
     ?>
 
-    <tr><td><label style="margin-left:50px;margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Change your profile</label>
+    <tr><td>
+      <label style="margin-left:50px;margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Change your profile</label>
       <input id="files" style="visibility:hidden;" name="updateProfile" type="file">
     </td></tr>
     <tr><td><button style="margin-left:20px" type="submit" name="submit-updateProfile">Save</button></td></tr>

@@ -17,7 +17,7 @@
     $row = $data->fetch_assoc();
     $image = $row["image"];
     $station = $row["stationName"];
-
+    $_SESSION["stationID"] = $id;
     $_SESSION["banner"] = $row["stationName"];
 ?>
 <html>
@@ -31,17 +31,37 @@
 </head>
 <body>
   <h1><?php echo $station; ?></h1>
-  <table style="width: 100%">
+  <table style="width: 100%; margin: 10px">
     <tr>
-      <td class="center">
-        <div id="image-box">
+      <td>
           <?php
           echo '<img id="location-image" src="'.$image.'">';
           ?>
-        </div>
       </td>
     </tr>
+    <tr>
+        <td>
+          <p>other Photos</p>
+        </td>
+    </tr>
+    <tr>
+      <td style="margin: 20px">
+        <?php
+        echo '<img class="other-photos" src="'.$image.'">';
+        echo '<img class="other-photos" src="'.$image.'">';
+        echo '<img class="other-photos" src="'.$image.'">';
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <form action="check-upload-photo.php" method="post" enctype="multipart/form-data">
+        <td style="margin: 20px">
+          <label style="margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Add photos</label>
+          <input id="files" style="visibility:hidden;" name="updateProfile" type="file">
+          <button style="margin-left:10px" type="submit" name="submit-upload-photo">upload</button>
+        </td>
+      </form>
+    </tr>
   </table>
-
 </body>
 </html>
