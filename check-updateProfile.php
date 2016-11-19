@@ -21,7 +21,7 @@
         while($row = mysqli_fetch_array($result)){
           $blobIMG = $row['profile'];
         }
-        
+
         $_SESSION['login-image'] = $blobIMG;
         header("location: showAccount.php");
       }
@@ -29,4 +29,5 @@
         echo "Error";
       }
     }
+    header("Location: showaccount.php");
  ?>
