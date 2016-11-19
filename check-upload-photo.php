@@ -15,13 +15,15 @@
 
     if($_FILES["updateProfile"]["name"] != ""){
       $image = addslashes(file_get_contents($_FILES['updateProfile']['tmp_name']));
-      $sql = "INSERT INTO photo (stationID, userID, image) VALUES ('".$id."','".$user."','".$image."');";
+      $sql = "INSERT INTO photos (stationID, userName, image) VALUES ('".$id."','".$user."','".$image."');";
 
       if ($connect->query($sql) === TRUE) {
         echo "success ..";
+        header("refresh: 2; url= location.php");
       }
       else {
         echo "Error!!";
+        header("refresh: 2; url= location.php");
       }
     }
  ?>

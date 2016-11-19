@@ -27,21 +27,22 @@
 
   <div id="backpage-showAccount" style="height:520px">
     <form action="check-updateProfile.php" method="post" enctype="multipart/form-data">
+    <table>
     <?php
     $post_name = $_SESSION['login-username'];
     $sql = "SELECT * FROM user WHERE userName='$post_name'";
     $printout = mysqli_query($connect, $sql);
     while($row = mysqli_fetch_array($printout)){
+
       echo "<div id=\"Username-style\" style=\"margin-left:10px\">".$row['userName']."</div>";
       echo '<table><tr><th rowspan="4">';
       echo '<img style="width:250px;height:250px;border-radius:150px" src="data:image/jpeg;base64,'.base64_encode( $row['profile'] ).'"/>'.'</th>';
-      echo "<td><div id=\"show-name\">Name: ".$row['firstName']."</div></td></tr>";
-      echo "<tr><td><div id=\"show-name\">Surname: ".$row['lastName']."</div></td></tr>";
-      echo "<tr><td><div id=\"show-name\">Gender: ".$row['Gender']."</div></td></tr>";
-      echo "<tr><td><div id=\"show-name\">Birthday: ".$row['birthDay']."</div></td></tr>";
+      echo "<td><p id=\"show-name\">Name: ".$row['firstName']."</p></td></tr>";
+      echo "<tr><td><p id=\"show-name\">Surname: ".$row['lastName']."</p></td></tr>";
+      echo "<tr><td><p id=\"show-name\">Gender: ".$row['Gender']."</p></td></tr>";
+      echo "<tr><td><p id=\"show-name\">Birthday: ".$row['birthDay']."</p></td></tr>";
     }
     ?>
-
     <tr><td>
       <label style="margin-left:50px;margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Change your profile</label>
       <input id="files" style="visibility:hidden;" name="updateProfile" type="file">

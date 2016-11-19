@@ -31,6 +31,7 @@
 </head>
 <body>
   <h1><?php echo $station; ?></h1>
+  <form action="check-upload-photo.php" method="post" enctype="multipart/form-data">
   <table style="width: 100%; margin: 10px">
     <tr>
       <td>
@@ -54,14 +55,13 @@
       </td>
     </tr>
     <tr>
-      <form action="check-upload-photo.php" method="post" enctype="multipart/form-data">
         <td style="margin: 20px">
           <label style="margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Add photos</label>
           <input id="files" style="visibility:hidden;" name="updateProfile" type="file">
-          <button style="margin-left:10px" type="submit" name="submit-upload-photo">upload</button>
+          <button style="margin-left:10px" type="submit">upload</button>
         </td>
-      </form>
     </tr>
   </table>
+  </form>
 </body>
 </html>
