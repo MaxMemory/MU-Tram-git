@@ -36,7 +36,12 @@
         <table style="width: 100%">
           <tr>
             <td class="center">
-              <canvas id="map">asdfasdfads</canvas>
+              <div id="map">
+                <img class="image-tram" />
+                <img src="image/map/green2.png" class="image_Green image-tram" />
+                <img src="image/map/blue2.png" class="image_Blue image-tram" />
+                <img src="image/map/red2.png" class="image_Red image-tram" />
+              </div>
             </td>
           </tr>
           <tr>
@@ -61,16 +66,16 @@
                 <div class="slider round"></div>
               </label>
               <h1 class="Big">Red</h1>
-              <label class="switch" style="margin: auto">
+              <!-- <label class="switch" style="margin: auto">
                 <input type="checkbox" id="TramYellow" checked onclick="acBottomYellow()" value="true">
                 <div class="slider round"></div>
               </label>
-              <h1 class="Big">Yellow</h1>
+              <h1 class="Big">Yellow</h1> -->
               <br />
               <canvas class="object_Green"></canvas>
               <canvas class="object_Blue"></canvas>
               <canvas class="object_Red"></canvas>
-              <canvas class="object_Yellow"></canvas>
+              <!-- <canvas class="object_Yellow"></canvas> -->
 
             </td>
           </tr>

@@ -15,6 +15,13 @@
   border-width: 2px;
   border-radius: 10px;
 }
+
+.image_Green, .image_Blue, .image_Red, .image_Yellow{
+  animation-name: tramblink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 .object_Green{
   background-color: #AF3;
 }
