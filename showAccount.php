@@ -54,7 +54,7 @@
     </form>
     <div class="container" style="padding: 0px">
     <div class="row">
-      <h1 class="Username-style" style="text-shadow: 0px 1px 5px #AAA;">You photos</h1>
+      <h1 class="Username-style" style="text-shadow: 0px 1px 5px #AAA;">Your photos</h1>
     </div>
       <?php
         $sql = "SELECT photosID, stationID, userName, image FROM photos WHERE userName='".$user."';";
@@ -80,7 +80,7 @@
                   </div>
                 </div>
                 <div class="col-xs-2">
-                  <?php echo '<button type="button" class="cancelbutton" name="'.$row['photosID'].'" >Delete</button>'; ?>
+                  <?php echo '<button type="button" class="cancelbutton" value="'.$row['photosID'].'">Delete</button>'; ?>
                 </div>
               </div>
               <hr />
@@ -90,6 +90,8 @@
       ?>
       </div>
   </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="javascript/menubar.js"></script>
 <script src="javascript/showaccount.js"></script>
 </body>

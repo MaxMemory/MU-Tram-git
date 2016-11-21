@@ -54,13 +54,23 @@
         ?>
       </td>
     </tr>
-    <tr>
-        <td style="margin: 20px">
-          <label style="margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Add photos</label>
-          <input id="files" style="visibility:hidden;" name="updateProfile" type="file">
-          <button style="margin-left:10px" type="submit">upload</button>
-        </td>
-    </tr>
+    <?php
+      if(isset($_SESSION['login-user'])){
+        ?><tr>
+            <td style="margin: 20px">
+              <label style="margin-top:10px;color:white;background-color:28B5C7" for="files" class="btn">Add photos</label>
+              <input id="files" style="visibility:hidden;" name="updateProfile" type="file">
+              <button style="margin-left:10px" type="submit">upload</button>
+            </td>
+        </tr><?php
+      }
+
+
+
+
+
+
+    ?>
   </table>
   </form>
 </body>

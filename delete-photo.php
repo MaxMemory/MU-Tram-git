@@ -10,7 +10,9 @@
       die("Connection error: ".$connect->connect_error);
     }
     $photosID = $_POST['album'];
-    echo "asdf";
+
+    $sql = 'DELETE FROM photos WHERE photosID = '.$photosID.';';
+    $connect->query($sql);
 
 
 

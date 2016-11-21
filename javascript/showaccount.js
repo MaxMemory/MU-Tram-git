@@ -3,7 +3,10 @@ $(document).ready(function(){
     $.ajax({
       type: 'POST',
       url: 'delete-photo.php',
-      data: { album: this.name}
+      data: { album: this.value},
+      success: function(html) {
+        location.reload();
+      }
     });
   });
 
