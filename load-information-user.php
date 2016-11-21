@@ -24,7 +24,9 @@
     $tram_green = "";
     $tram_blue = "";
     $tram_red = "";
-
+    $hour = (date("H")+7)%24;
+    $min = date("i");
+    $date = $hour.".".$min;
 
 
     if($row["green"] == 1){
@@ -32,15 +34,32 @@
       $timeSql = $connect->query($sql);
       $timeGreen = $timeSql->fetch_assoc();
       $tram_green = "True";
-      // $hour = date("h");
-      // $min = date("i");
+      $timeArray = explode(" ",$timeGreen['timeGeneral']);
+      $total_green = 0;
+      foreach($timeArray as $i){
+          $dateTram = explode(".",$i);
+          if($i > $date){
+            $total_green = 60*($dateTram[0]-$hour) + ($dateTram[1]-$min);
+            break;
+          }
+      }
+
     }
 
     if($row["blue"] == 1){
       $sql = 'SELECT timeGeneral, timeSpecial FROM schedule WHERE stationID = '.$id.' and color = "blue";';
       $timeSql = $connect->query($sql);
-      $timeblue = $timeSql->fetch_assoc();
+      $timeBlue = $timeSql->fetch_assoc();
       $tram_blue = "True";
+      $timeArray = explode(" ",$timeBlue['timeGeneral']);
+      $total_blue = 0;
+      foreach($timeArray as $i){
+          $dateTram = explode(".",$i);
+          if($i > $date){
+            $total_blue = 60*($dateTram[0]-$hour) + ($dateTram[1]-$min);
+            break;
+          }
+      }
     }
 
     if($row["red"] == 1){
@@ -48,6 +67,15 @@
       $timeSql = $connect->query($sql);
       $timeRed = $timeSql->fetch_assoc();
       $tram_red = "True";
+      $timeArray = explode(" ",$timeRed['timeGeneral']);
+      $total_red = 0;
+      foreach($timeArray as $i){
+          $dateTram = explode(".",$i);
+          if($i > $date){
+            $total_red = 60*($dateTram[0]-$hour) + ($dateTram[1]-$min);
+            break;
+          }
+      }
     }
 
 ?>
@@ -79,39 +107,48 @@
     <?php
       if($tram_green == "True"){
     ?>
-      <div class="row">
+      <div class="row" style="margin-bottom: 5px">
         <div class="col-xs-1">
           <canvas class="object_Green"></canvas>
         </div>
         <div class="col-xs-11">
           <a style="color: Green">Green: </a>
-          20 min left
+          <?php
+            if($total_green == 0) echo " - ";
+            else echo $total_green." minute left";
+          ?>
         </div>
       </div>
     <?php
       }
       if($tram_blue == "True"){
     ?>
-    <div class="row">
+    <div class="row" style="margin-bottom: 5px">
       <div class="col-xs-1">
         <canvas class="object_Blue"></canvas>
       </div>
       <div class="col-xs-11">
         <a style="color: Blue" >Blue: </a>
-        20 min left
+        <?php
+          if($total_blue == 0) echo " - ";
+          else echo $total_blue." minute left";
+        ?>
       </div>
     </div>
     <?php
       }
       if($tram_red == "True"){
     ?>
-    <div class="row">
+    <div class="row" style="margin-bottom: 5px">
       <div class="col-xs-1">
         <canvas class="object_Red"></canvas>
       </div>
       <div class="col-xs-11">
         <a style="color: Red">Red: </a>
-        20 min left
+        <?php
+          if($total_red == 0) echo " - ";
+          else echo $total_red." minute left";
+        ?>
       </div>
     </div>
     <?php } ?>
