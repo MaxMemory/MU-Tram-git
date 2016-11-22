@@ -67,12 +67,8 @@
                 <div class="slider round"></div>
               </label>
               <h1 class="Big">Red</h1>
-              <button type="button" id="magnify_buttom" onclick="magnify()" value="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Magnify</button>
-              <!-- <label class="switch" style="margin: auto">
-                <input type="checkbox" id="TramYellow" checked onclick="acBottomYellow()" value="true">
-                <div class="slider round"></div>
-              </label>
-              <h1 class="Big">Yellow</h1> -->
+              <a href="magnifyMap.php"><button style="width:auto;float:right;margin-right:10px">See Big Map!!</button></a>
+
               <br />
               <canvas class="object_Green"></canvas>
               <canvas class="object_Blue"></canvas>
@@ -114,5 +110,18 @@
   <script src="javascript/TramScript.js"></script>
   <script src="javascript/location.js"></script>
   <script src="javascript/magnify.js"></script>
+
+  <script>
+// Get the modal
+  var modal = document.getElementById('bigMap');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
 </body>
 </html>
