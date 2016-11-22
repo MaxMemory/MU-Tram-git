@@ -26,4 +26,7 @@
         header("refresh: 2; url= location.php");
       }
     }
+    else{
+      header("Location: location.php");
+    }
  ?>

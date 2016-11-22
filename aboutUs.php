@@ -59,15 +59,23 @@
       <tr style="width: 100%">
         <td>
           <p class="text-name">Pond (MUICT#13)</p>
+          <p class="text-name">Niramit Cheunprapanusorn</p>
+          <p class="text-name">5888021</p>
         </td>
         <td>
           <p class="text-name">Ice (MUICT#13)</p>
+          <p class="text-name">Parintorn Pooyoi</p>
+          <p class="text-name">5888149</p>
         </td>
         <td>
           <p class="text-name">Max (MUICT#13)</p>
+          <p class="text-name">Suchakree Srinara</p>
+          <p class="text-name">5888170</p>
         </td>
         <td>
           <p class="text-name">Art (MUICT#13)</p>
+          <p class="text-name">Thanan Sapthamrong</p>
+          <p class="text-name">5888176</p>
         </td>
       </tr>
 
