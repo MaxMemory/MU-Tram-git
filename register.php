@@ -31,7 +31,7 @@
       <div id="registerBox">
         <h1 class="center">Register</h1>
         <form action="check-register.php" method="post" enctype="multipart/form-data">
-          <table style="width: 100% overflow: hidden">
+          <table style="overflow: hidden">
             <tr>
               <td><b>First name</b></td>
               <td><input type="text" placeholder="Enter first name" name="firstname" required></td>
@@ -60,7 +60,11 @@
             </tr>
             <tr>
               <td><b>image profile</b></td>
-              <td><input type="file" name="upload"></td>
+              <td>
+                <label style="margin-top:10px;color:white;background-color:28B5C7;" for="files" class="btn">Change your profile</label>
+                <input id="files" style="visibility:hidden;" name="upload" type="file">
+              </td>
+              <!-- <td><input type="file" name="upload" required></td> -->
             </tr>
             <tr>
               <td><button type="submit" class="submit-register">Register</button></td>

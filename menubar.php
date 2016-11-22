@@ -9,15 +9,7 @@
       <li><a href="index.php" >Home</a></li>
       <li><a href="location.php" >Location</a></li>
       <li><a href="aboutUS.php" >About us</a></li>
-      <li style="float: right">
-        <div class="dropdown">
-          <a class="dropdown-toggle" id="menu1" data-toggle="dropdown" href="#">Language<span class="caret"></span>&nbsp;</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Thai</a></li>
-          </ul>
-        </div>
-      </li>
+      
       <?php
       if(isset($_SESSION['login-user'])){
         echo "<li style=\"float: right\"><a href=\"logout.php\">log out</a></li>";
@@ -38,10 +30,10 @@
 
       <div class="container">
         <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" style="width:100%" placeholder="Enter Username" name="uname" required>
 
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" style="width:100%" placeholder="Enter Password" name="psw" required>
         <button type="submit" name="submit-login">Login</button>
       </div>
 

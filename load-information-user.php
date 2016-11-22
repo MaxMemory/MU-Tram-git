@@ -15,7 +15,22 @@
     $sql = 'SELECT stationID, stationName, image, green, blue, red FROM stations WHERE stationID = '.$id.';';
     $data = $connect->query($sql);
 
+    // input other photos data
 
+    // $sql = 'SELECT * FROM photos WHERE stationID = '.$id.';';
+    // $otherPhotos = $connect->query($sql);
+    // $setOther = array();
+    // $i = 0;
+    // if($otherPhotos->num_rows > 0){
+    //   while($eachPhoto = $otherPhotos->fetch_assoc()){
+    //     $setOther[$i] = 'data:image/jpeg;base64,'.base64_encode( $eachPhoto['image'] );
+    //     echo '<img style="width:50px; height:50px;" src="'.$setOther[$i].'"/>';
+    //     $i ++;
+    //   }
+    // }
+
+
+    ;// set information station
     $row = $data->fetch_assoc();
     $image = $row["image"];
     $station = $row["stationName"];
@@ -28,7 +43,7 @@
     $min = date("i");
     $date = $hour.".".$min;
 
-
+    // set green Tram
     if($row["green"] == 1){
       $sql = 'SELECT timeGeneral, timeSpecial FROM schedule WHERE stationID = '.$id.' and color = "green";';
       $timeSql = $connect->query($sql);
@@ -46,6 +61,7 @@
 
     }
 
+    // set blue Tram
     if($row["blue"] == 1){
       $sql = 'SELECT timeGeneral, timeSpecial FROM schedule WHERE stationID = '.$id.' and color = "blue";';
       $timeSql = $connect->query($sql);
@@ -62,6 +78,7 @@
       }
     }
 
+    // set red Tram
     if($row["red"] == 1){
       $sql = 'SELECT timeGeneral, timeSpecial FROM schedule WHERE stationID = '.$id.' and color = "red";';
       $timeSql = $connect->query($sql);
@@ -160,11 +177,8 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <?php
-        echo '<img class="other-photos" src="'.$image.'">';
-        echo '<img class="other-photos" src="'.$image.'">';
-        echo '<img class="other-photos" src="'.$image.'">';
-        ?>
+        <!-- Add Photos -->
+        <?php include 'carousel.php';?>
       </div>
     </div>
       <?php
@@ -181,4 +195,5 @@
     </form>
   </div>
 </body>
+
 </html>

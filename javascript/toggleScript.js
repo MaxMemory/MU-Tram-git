@@ -87,6 +87,8 @@ function acBottomBlue(){
     $(".image_Blue").css("display", "initial");
   }
 }
+
+
 // function acBottomYellow(){
 //   var bottomYellow = document.getElementById("TramYellow");
 //   if(bottomYellow.value == "true"){

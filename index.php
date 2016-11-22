@@ -22,6 +22,7 @@
   <link rel="stylesheet" type="text/css" href="css/Tramstyle.css" />
   <link rel="stylesheet" type="text/css" href="css/putTramStyle.css" />
   <link rel="stylesheet" type="text/css" href="css/LogInForm.css" />
+  <link rel="stylesheet" type="text/css" href="css/magnify.css" />
 
 <!-- Art so good already -->
 
@@ -36,12 +37,12 @@
         <table style="width: 100%">
           <tr>
             <td class="center">
-              <div id="map">
-                <img class="image-tram" />
-                <img src="image/map/green2.png" class="image_Green image-tram" />
-                <img src="image/map/blue2.png" class="image_Blue image-tram" />
-                <img src="image/map/red2.png" class="image_Red image-tram" />
-              </div>
+                <div id="map">
+                  <img class="image-tram" />
+                  <img src="image/map/green2.png" class="image_Green image-tram" />
+                  <img src="image/map/blue2.png" class="image_Blue image-tram" />
+                  <img src="image/map/red2.png" class="image_Red image-tram" />
+                </div>
             </td>
           </tr>
           <tr>
@@ -66,6 +67,7 @@
                 <div class="slider round"></div>
               </label>
               <h1 class="Big">Red</h1>
+              <button type="button" id="magnify_buttom" onclick="magnify()" value="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Magnify</button>
               <!-- <label class="switch" style="margin: auto">
                 <input type="checkbox" id="TramYellow" checked onclick="acBottomYellow()" value="true">
                 <div class="slider round"></div>
@@ -103,6 +105,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
 
   <script src="javascript/TramjQuery.js"></script>
   <script src="javascript/javascript.js"></script>
@@ -110,5 +113,6 @@
   <script src="javascript/toggleScript.js"></script>
   <script src="javascript/TramScript.js"></script>
   <script src="javascript/location.js"></script>
+  <script src="javascript/magnify.js"></script>
 </body>
 </html>
